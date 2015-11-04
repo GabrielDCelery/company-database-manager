@@ -1,0 +1,50 @@
+index.html
+
+settings
+ app.js
+ settings.php
+ login.php
+ logout.php
+ language.json
+
+public
+ css
+  normalize.css
+  style.css
+ images
+ templates
+  login.html
+  _mainmenu.html
+  companies.html
+  _companies-search.html
+  _companies-email.html
+  _companies-details.html
+  _companies-extend.html
+  _companies-addnew.html
+  _companies-submenu.html
+  mailing.html
+  _mailing-search.html
+  _mailing-forwarding.html
+  _mailing-edit.html
+  _mailing-addnew.html
+  _mailing-submenu.html
+
+dependencies
+
+features
+ companies
+  companies.js
+  companiesFactory.js
+  ...
+  ..
+  .
+ mailing
+  mailing.js
+  mailingFactory.js
+  ...
+  ..
+  .
+
+documentation
+
+non-final-product-related

@@ -1,0 +1,31 @@
+0.0 Short description
+
+A company that offers official postal address to other companies requires a user interface and a database that would do the heavy lifting for two of their most tedious tasks. Managing the expired contracts and the incoming/outgoing mailing of their customers.
+
+1.0 Understanding the problem
+
+The company provides official postal address to approximately 150 customers. Their workflow is the following: If the postman brings a letter to any of these customers the company scans and sends its content to the customer via email.  The service has a monthly fee, usually 6 months in advance has to be paid. The customer can also pay an extra fee so the company will forward these letters to the customer. If not these letters are held at the office.
+
+In summary their needs can be split into two major blocks:
+
+	- managing the new and expired contracts
+	- managing the mailing
+
+1.1 Managing the new and expired contracts
+
+They have two excel tables. The first table holds the information of all the active contracts and their current term. The second one keeps track of any changes that happen while the contract is active (personal data, contact etc...). This includes the already expired terms. 
+
+If a contract is about to expire they contact the customer via phone and send out emails manually. If they get a new customer they add it to the first table.
+
+1.2 Managing the mailing
+
+The company is creating excel tables monthly about the mailing. They scan the mails, send their contents to the customers via email (gmail), and post them monthly or keep it at the office dependent on they type of the contract.
+
+The company  wants to store the scanned letters on their local office computer and still send the scanned versions via email.
+
+2.0 Solving the problem
+
+The project is replacing and connecting the tables with a database and creating an interface that makes it possible for the user to access and manipulate it.
+
+	- creating a database
+	- creating a user interface
