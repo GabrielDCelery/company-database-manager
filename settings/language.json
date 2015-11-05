@@ -229,7 +229,8 @@
                 "nonforwarded": "NON-FORWARDED",
                 "forwarded": "FORWARDED",
                 "haspostalservice": "HAS POSTAL SERVICE",
-                "doesnthavepostalservice": "DOESN'T HAVE POSTAL SERVICE"
+                "doesnthavepostalservice": "DOESN'T HAVE POSTAL SERVICE",
+                "listmails": "LIST MAILS"
             },
 
             "forward": {
