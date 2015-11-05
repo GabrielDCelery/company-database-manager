@@ -1,0 +1,46 @@
+index.html
+
+src
+ app-core
+  app.js
+  connect-to-database.php
+  login.php
+  logout.php
+ app-features
+  companies
+  mailing
+ dependencies
+ styling
+  css
+  images
+  templates
+   login.html
+   _menu-main.html
+    companies
+     companies.html
+     _companies-data.html
+     _companies-form-details.html
+     _companies-form-email.html
+     _companies-form-extend.html
+     _companies-form-search.html
+     _companies-overlay-addnew.html
+     _companies-overlay-extend.html
+     _companies-submenu.html
+    mailing
+     mailing.html
+     _mailing-data.html
+     _mailing-form-addnew.html
+     _mailing-form-edit.html
+     _mailing-form-forwarding.html
+     _mailing-form-search.html
+     _mailing-submenu.html
+
+docs
+ folder-structure.txt
+ project-description.txt
+
+settings
+ settings.php
+ language.json
+
+non-final-production

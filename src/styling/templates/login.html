@@ -1,0 +1,11 @@
+<!-- MAIN LOGIN -->
+<div class="container-dynamic-content">
+	<form id ="login" class="data-blue">
+		<label for="username">{{language.main.login.username}}</label>
+		<input type="text" name="username" ng-model = "loginData.userName">
+		<label for="password">{{language.main.login.password}}</label>
+		<input type="password" name="password" ng-model = "loginData.password">
+		<button ng-click="login(loginData)">{{language.main.login.submit}}</button>
+	</form>
+</div>
+<!-- main login END -->

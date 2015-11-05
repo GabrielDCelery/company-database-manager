@@ -1,0 +1,506 @@
+/*
+hex-rgba converter http://hex.colorrrs.com/
+html color generator http://html-color-codes.info/
+color palettes http://www.colourlovers.com/
+*/
+
+/******************************************************************************************
+NORMALIZATION ADDITION
+******************************************************************************************/
+
+* {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+ }
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/******************************************************************************************
+MAIN STRUCTURE
+******************************************************************************************/
+
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+	width:0px;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.menu,
+.menu-features {
+	width: 7%;
+	position: fixed;
+	top: 0;
+	height: 100%;
+}
+
+.menu {
+	left: 0;
+}
+
+.menu-features {
+	right: 0;
+}
+
+.container-dynamic-content {
+	width: 86%;
+	margin: 0 auto;
+	padding: 10px 20px;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 0 7%;
+	top: 0;
+	z-index: 0;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+
+.overlay-menu {
+	width: 7%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 2;
+}
+
+.overlay-loadingscreen {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 10% 0;
+	top: 0;
+	z-index: 10;
+	background-color: #000;
+	opacity: 0.6;
+}
+
+/******************************************************************************************
+GENERAL STYLING
+******************************************************************************************/
+
+input[type=text],
+input[type=date],
+input[type=number],
+input[type=email],
+input[type=password],
+select,
+button {
+	width: 100%;
+	padding: 10px;
+	color: #000;
+}
+
+
+/******************************************************************************************
+LOGIN FORM STYLING
+******************************************************************************************/
+#login {
+	width: 40%;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	border: 5px solid #0A4EB3;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+#login label,
+#login input,
+#login button {
+	margin: 10px 0;
+}
+
+#login label {
+	display: block;
+}
+
+/******************************************************************************************
+MENU AND FEATURE MENU STYLING
+******************************************************************************************/
+
+.menu,
+.menu-features,
+.overlay-menu {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.menu li,
+.menu-features li,
+.overlay-menu li {
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.menu li:last-child,
+.menu-features li:last-child {
+	margin-bottom: 0px;
+}
+
+.menu img,
+.menu-features img,
+.overlay-menu img {
+	width: 80%;
+}
+
+.overlay-loadingscreen img {
+	width: 10%;
+}
+
+.menu p,
+.menu-features p,
+.overlay-menu p {
+	margin: 0;
+	padding: 5px 0 0;
+	font-size: 14px;
+}
+
+.menu a,
+.menu-features a,
+.overlay-menu a {
+	display: block;
+	color: #fff;
+	padding: 5%;
+	cursor: pointer;
+}
+
+/******************************************************************************************
+MENU COLORS
+******************************************************************************************/
+
+.mnu-white,
+.menu-black,
+.menu-blue,
+.menu-red,
+.menu-green,
+.menu-yellow,
+.meun-cyan,
+.menu-purple {
+    color: #fff;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+.menu-white {
+	background-image: radial-gradient(#FFF,#F9F9FA);
+}
+
+.menu-black {
+	background-image: radial-gradient(#173155,#0E1628);
+}
+
+.menu-blue {
+	background-image: radial-gradient(#4096C1, #0A4EB3);
+}
+
+.menu-cyan {
+	background-image: radial-gradient(#30B0A3, #26706B);
+}
+
+.menu-red {
+	background-image: radial-gradient(#B0304E,#70263A);
+}
+
+.menu-green {
+	background-image: radial-gradient(#34B030,#2A7026);
+}
+
+.menu-yellow {
+	background-image: radial-gradient(#C39C40,#B3700B);
+}
+
+.menu-purple {
+	background-image: radial-gradient(#AE30B0,#702670);
+}
+
+/*****************************************************************************************
+INPUT - MENU AND DATA
+******************************************************************************************/
+
+.menu-input, 
+.data-input {
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 2;
+	margin: 10px 0;
+	font-size: 14px;
+	box-shadow:0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.menu-input {
+	font-size: 16px;
+}
+
+.menu-input li,
+.data-input li {
+	border: 1px dotted rgba(55, 55, 55, .5);
+	border: 1px dotted rgba(55, 55, 55, .5);
+}
+
+.menu-input li,
+.data-input li {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.menu-input img {
+	width: 100%;
+}
+
+.menu-input a:hover {
+	cursor: pointer;
+}
+
+.menu-listing {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu-listing li {
+	font-size: 20px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.menu-listing li:hover{
+	color: #fff;
+	cursor: pointer;
+}
+
+.menu-listing-red li{
+	border: 2px solid #70263A;
+}
+
+.menu-listing-red li:hover {
+	background-image: radial-gradient(#B0304E,#70263A);
+}
+
+.menu-listing-green li{
+	border: 2px solid #2A7026;
+}
+
+.menu-listing-green li:hover {
+	background-image: radial-gradient(#34B030,#2A7026);
+}
+
+/******************************************************************************************
+OUTPUT - DATA
+******************************************************************************************/
+.data,
+.data-menu {
+	display: flex;
+}
+
+
+.data-menu {
+	line-height: 4;	
+}
+
+.data {
+	line-height: 3;
+	font-size: 14px;
+}
+
+.data,
+.data-menu {
+	text-align: center;
+	box-shadow:0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.data li,
+.data-menu li {
+	border: 1px dotted rgba(55, 55, 55, .5);
+}
+
+.data-menu li:hover {
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+}
+
+.data-green,
+.data-yellow,
+.data-red,
+.data-grey {
+	color: #000;
+}
+
+.data-blue {
+	color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+.data-blue {
+	background-image: radial-gradient(#4096C1, #0A4EB3);
+}
+
+.data-green{
+	background-image: radial-gradient(#E8F7E9, #BCF8AC);
+}
+
+.data-yellow{
+	background-image: radial-gradient(#EEEED4, #F3E49F);
+}
+
+.data-red{
+	background-image: radial-gradient(#EBCBCE, #F796A9);
+}
+
+.data-grey{
+	background-image: radial-gradient(#EEF1F4, #D3D6DB);
+}
+
+.data-purple {
+	background-image: radial-gradient(#AE30B0,#702670);
+}
+
+.data-menu input[type=checkbox],
+.data-input input[type=checkbox],
+.data input[type=checkbox],
+.menu-input input[type=checkbox] {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.menu-input input[type=checkbox] {
+	margin-right: 10px;
+}
+
+.col-1-25 {
+	width: 4%;
+}
+
+.col-2-25 {
+	width: 8%;
+}
+
+.col-3-25 {
+	width: 12%;
+}
+
+.col-4-25 {
+	width: 16%;
+}
+
+.col-5-25 {
+	width: 20%;
+}
+
+.col-6-25 {
+	width: 24%;
+}
+
+.col-7-25 {
+	width: 28%;
+}
+
+.col-8-25 {
+	width: 32%;
+}
+
+.col-9-25 {
+	width: 36%;
+}
+
+.col-10-25 {
+	width: 40%;
+}
+
+.col-11-25 {
+	width: 44%;
+}
+
+.col-12-25 {
+	width: 48%;
+}
+
+.col-13-25 {
+	width: 52%;
+}
+
+.col-14-25 {
+	width: 56%;
+}
+
+.col-15-25 {
+	width: 60%;
+}
+
+.col-25-25 {
+	width: 100%;
+}
+
+/******************************************************************************************
+INTERACTIONS
+******************************************************************************************/
+
+.interaction {
+	cursor: pointer;
+}
+
+.interaction li:hover{
+	background: rgba(0,0,0,0.3);
+}
+
+/******************************************************************************************
+MEDIA QUERIES
+******************************************************************************************/
+
+@media screen and (orientation:landscape) {
+
+}
+
+
+/******************************************************************************************
+CLEARFIX
+******************************************************************************************/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

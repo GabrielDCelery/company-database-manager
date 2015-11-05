@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="src/styling/css/normalize.css">
+	<link rel="stylesheet" href="src/styling/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"></script>
+	<script src="src/app-core/app.js"></script>
+</head>
+
+<body ng-app="databaseManager" ng-controller="setupCtrl">
+	<div ng-include="'src/styling/templates/_menu-main.html'" ng-show="showContent"></div>
+	<div ng-include="'src/styling/templates/login.html'" ng-show="!showContent"></div>
+	<div ng-view ng-show="showContent"></div>
+</body>
+
+</html>

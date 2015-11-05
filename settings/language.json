@@ -1,0 +1,302 @@
+{
+    "main": {
+        "menu": {
+            "contract": "CONTRACT",
+            "mailing": "MAILING",
+            "invoices": "INVOICES",
+            "settings": "SETTINGS",
+            "logout": "LOGOUT"
+        },
+
+        "login": {
+            "username": "USERNAME",
+            "password": "PASSWORD",
+            "submit": "SUBMIT"
+        },
+        "alert": {
+            "loginsuccessful": "Login successful!",
+            "loginunsuccessful": "Login unsuccessful!"
+        }
+
+    },
+
+    "companies": {
+
+        "submenu": {
+            "search": "SEARCH",
+            "email": "EMAIL",
+            "details": "DETAILS",
+            "extend": "EXTEND",
+            "addnew": "ADD NEW",
+            "excel": "CREATE EXCEL",
+            "reset": "RESET"
+        },
+
+        "form": {
+            "search": {
+                "companyname": "COMPANY NAME",
+                "managername": "MANAGER NAME",
+                "expirationdateinterval": "EXPIRATION DATE INTERVAL",
+                "validcontract": "VALID CONTRACT",
+                "expiredcontract": "EXPIRED CONTRACT",
+                "lastcontract": "LAST CONTRACTS ONLY",
+                "listcompanies": "LIST COMPANIES"
+            },
+
+            "email": {
+                "subject": "SUBJECT OF EMAIL",
+                "contractexpired": "Your contract expired",
+                "lastwarning": "Last warning before cancelling contract",
+                "sendmail": "SEND EMAIL TO SELECTED"
+            },
+
+            "details": {
+                "showdetails": "SHOW DETAILS OF SELECTED"
+            },
+
+            "status": {
+                "changestatus": "CHANGE STATUS OF SELECTED",
+                "extendcontract": "EXTEND CONTRACT OF SELECTED"
+            },
+
+            "addnew": {
+                "companyname": "COMPANY NAME",
+                "startingdate": "STARTING DATE",
+                "endingdate": "ENDING DATE",
+                "phonenumber": "PHONE NUMBER",
+                "email": "EMAIL",
+                "invoicenumber": "INVOICE NUMBER",
+                "serviceprovider": "SERVICE PROVIDER",
+                "transferdate": "TRANSFER DATE",
+                "invoicedate": "INVOICE DATE",
+                "paymentmethod": "PAYMENT METH.",
+                "accountnumber": "ACCOUNT NUM.",
+                "priceofservicenumber": "PRICE OF SERV. (NUM)",
+                "priceofserviceletter": "PRICE OF SERV. (LET)",
+                "companyaddress": "COMPANY ADDRESS",
+                "companyid": "COMPANY ID",
+                "taxid": "TAX ID",
+                "postalnumber": "POSTAL NUMBER",
+                "postalservice": "POSTAL SERVICE",
+                "postalname": "POSTAL NAME",
+                "postaladdress": "POSTAL ADDRESS",
+                "managername": "MANAGER NAME",
+                "managerstatus": "MANAG. STATUS",
+                "managerid": "MANAG. ID",
+                "managermothername": "MAN. MOTHER'S NAME ",
+                "manageraddress": "MANAGER ADDRESS",
+                "documentholder": "DOCUMENT HOLDER",
+                "documentholderaddress": "DOCUMENT HOLDER ADDRESS",
+                "comments": "COMMENTS",
+                "saveintodatabase": "SAVE INTO DATABASE",
+                "printcontract": "PRINT CONTRACT"
+            },
+
+            "detailed": {
+                "companyname": "COMPANY NAME",
+                "startingdate": "STARTING DATE",
+                "endingdate": "ENDING DATE",
+                "phonenumber": "PHONE NUMBER",
+                "email": "EMAIL",
+                "invoicenumber": "INVOICE NUMBER",
+                "serviceprovider": "SERVICE PROVIDER",
+                "transferdate": "TRANSFER DATE",
+                "invoicedate": "INVOICE DATE",
+                "paymentmethod": "PAYMENT METH.",
+                "accountnumber": "ACCOUNT NUM.",
+                "priceofservicenumber": "PRICE OF SERV. (NUM)",
+                "priceofserviceletter": "PRICE OF SERV. (LET)",
+                "companyaddress": "COMPANY ADDRESS",
+                "companyid": "COMPANY ID",
+                "taxid": "TAX ID",
+                "postalnumber": "POSTAL NUMBER",
+                "postalservice": "POSTAL SERVICE",
+                "postalname": "POSTAL NAME",
+                "postaladdress": "POSTAL ADDRESS",
+                "managername": "MANAGER NAME",
+                "managerstatus": "MANAG. STATUS",
+                "managerid": "MANAG. ID",
+                "managermothername": "MAN. MOTHER'S NAME ",
+                "manageraddress": "MANAGER ADDRESS",
+                "documentholder": "DOCUMENT HOLDER",
+                "documentholderaddress": "DOCUMENT HOLDER ADDRESS",
+                "comments": "COMMENTS",
+                "edit": "EDIT",
+                "saveintodatabase": "SAVE INTO DATABASE",
+                "cancel": "CANCEL",
+                "printcover": "PRINT COVER",
+                "printcontract": "PRINT CONTRACT"
+            },
+
+            "extend": {
+                "companyname": "COMPANY NAME",
+                "startingdate": "STARTING DATE",
+                "endingdate": "ENDING DATE",
+                "phonenumber": "PHONE NUMBER",
+                "email": "EMAIL",
+                "invoicenumber": "INVOICE NUMBER",
+                "serviceprovider": "SERVICE PROVIDER",
+                "transferdate": "TRANSFER DATE",
+                "invoicedate": "INVOICE DATE",
+                "paymentmethod": "PAYMENT METH.",
+                "accountnumber": "ACCOUNT NUM.",
+                "priceofservicenumber": "PRICE OF SERV. (NUM)",
+                "priceofserviceletter": "PRICE OF SERV. (LET)",
+                "companyaddress": "COMPANY ADDRESS",
+                "companyid": "COMPANY ID",
+                "taxid": "TAX ID",
+                "postalnumber": "POSTAL NUMBER",
+                "postalservice": "POSTAL SERVICE",
+                "postalname": "POSTAL NAME",
+                "postaladdress": "POSTAL ADDRESS",
+                "managername": "MANAGER NAME",
+                "managerstatus": "MANAG. STATUS",
+                "managerid": "MANAG. ID",
+                "managermothername": "MAN. MOTHER'S NAME ",
+                "manageraddress": "MANAGER ADDRESS",
+                "documentholder": "DOCUMENT HOLDER",
+                "documentholderaddress": "DOCUMENT HOLDER ADDRESS",
+                "comments": "COMMENTS",
+                "edit": "EDIT",
+                "saveintodatabase": "SAVE INTO DATABASE",
+                "cancel": "CANCEL",
+                "printcontract": "PRINT CONTRACT"
+            }
+
+        },
+
+        "data": {
+
+            "menu": {
+                "companyname": "COMPANY NAME",
+                "email": "EMAIL",
+                "phonenumber": "PHONE NUM.",
+                "postalnumber": "POSTAL NUM.",
+                "startingdate": "START. DATE",
+                "endingdate": "ENDING DATE"
+            },
+
+            "paymentmethod": {
+                "cash": "cash",
+                "moneytransfer": "money transfer"
+            },
+
+            "postalservice": {
+                "yes": "yes",
+                "no": "no"
+            },
+
+            "managerstatus": {
+                "manager": "manager",
+                "commissioned": "commissioned"
+            }
+
+        },
+
+        "alert": {
+            "checklistempty" : "You haven't selected anything!",
+            "successfuloverwrite": "Data successfully overwritten!",
+            "changedcontractstatus": "Status of selected companies changed!",
+            "selectonlyone": "You can only extend the contract of one company at a time!",
+            "contractextended": "Contract successfully extended!",
+            "newcompanyadded": "Company successfully added to database",
+            "emailssent": "Email(s) sent!"
+
+        },
+
+        "confirm": {
+            "changecontractstatus": "Do you want to change the status of the selected company/companies?",
+            "reset": "Do you want to reset the page?"
+        }
+
+    },
+
+    "mailing": {
+
+        "submenu": {
+            "search": "SEARCH",
+            "forwardmails": "FORWAD MAIL",
+            "editmails": "EDIT MAILS",
+            "addnew": "ADD NEW",
+            "reset": "RESET"
+        },
+
+        "form": {
+
+            "search": {
+                "companyname": "COMPANY NAME",
+                "dateinterval": "DATE INTERVAL",
+                "nonforwarded": "NON-FORWARDED",
+                "forwarded": "FORWARDED",
+                "haspostalservice": "HAS POSTAL SERVICE",
+                "doesnthavepostalservice": "DOESN'T HAVE POSTAL SERVICE"
+            },
+
+            "forward": {
+                "forwarddate": "FORW. DATE",
+                "forwardmethod": "FORW. METHOD",
+                "saveintodatabase": "SAVE INTO DATABASE FOR SELECTED",
+                "printform": "PRINT FORM FOR SELECTED"
+            },
+
+            "edit": {
+                "editselected": "EDIT SELECTED",
+                "cancel": "CANCEL",
+                "saveintodatabase": "SAVE INTO DATABASE",
+                "deleteselected": "DELETE SELECTED"
+            },
+
+            "addnew": {
+                "companyname": "COMPANY NAME",
+                "date": "DATE",
+                "sendername": "SENDER NAME",
+                "senderaddress": "SENDER ADDRESS",
+                "addmails": "ADD MAILS"
+            }
+        },
+
+        "data": {
+            "menu": {
+                "companyname": "COMPANY NAME",
+                "sendername": "SENDER NAME",
+                "senderaddress": "SENDER ADDRESS",
+                "recievingdate": "DATE",
+                "forwardingdate": "FORW DATE",
+                "forwardingmethod": "FORW. METHOD"
+            }
+        },
+
+        "alert": {
+            "checklistempty" : "You haven't selected anything!",
+            "bothfilledorempty": "Both fields have to be either empty, or filled!",
+            "allhavetobefilled": "You have to fill all the fields to add mails!",
+            "successfuloverwrite": "Data successfully overwritten!",
+            "emailsaddedsuccessfully": "Email(s) added successfully"
+        },
+
+        "confirm": {
+            "reset": "Do you want to reset the page?",
+            "overwritedata": "Do you want to ovewrite the data?",
+            "deletemails": "Do you want to delete the selected mails?",
+            "forwardmails": "Do you want to forward the selected mails?"
+        }
+    },
+
+    "settings": {
+
+        "submenu": {
+            "excel": "EXCEL"
+        },
+
+        "form": {
+            "excel": {
+                "validcontract": "VALID CONTRACT",
+                "expiredcontract": "EXPIRED CONTRACT",
+                "expirationdateinterval": "ENDING DATE INTERVAL",
+                "lastcontract": "LAST CONTRACT ONLY",
+                "createexceltable": "CREATE EXCEL TABLE"
+            }
+        }
+    }
+
+}
