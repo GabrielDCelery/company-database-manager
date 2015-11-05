@@ -1,1 +1,55 @@
-<p>data</p>
+<!-- MAIL SHORTLIST MENU -->
+<ul class="data-menu data-blue" ng-show="display.data.mailsShortlist">
+	<li class="col-1-25">
+		<input type="checkbox" ng-click="checkAll()">
+	</li>
+	<li class="col-4-25" ng-click = "sortListedMailingData = 'company_name'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.companyname}}
+	</li>
+	<li class="col-4-25" ng-click = "sortListedMailingData = 'sender_name'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.sendername}}
+	</li>
+	<li class="col-6-25" ng-click = "sortListedMailingData = 'sender_address'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.senderaddress}}
+	</li>
+	<li class="col-3-25" ng-click = "sortListedMailingData = 'receiving_date'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.recievingdate}}
+	</li>
+	<li class="col-3-25" ng-click = "sortListedMailingData = 'forwarding_date'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.forwardingdate}}
+	</li>
+	<li class="col-4-25" ng-click = "sortListedMailingData = 'forwarding_method'; reverseListedMailingData = !reverseListedMailingData">
+		{{language.mailing.data.menu.forwardingmethod}}
+	</li>
+</ul>
+<!-- mail shortlist menu END-->
+
+<!-- MAIL SHORTLIST -->
+<ul class="data" ng-class="{green:'data-green', yellow:'data-yellow'}[mail.css_color]" ng-repeat="mail in mailsShortList | orderBy:sortListedMailingData:reverseListedMailingData">
+	<li class="col-1-25"><input type="checkbox" checklist-model="selectedMails.id" checklist-value="mail.mail_id"></li>
+	<li class="col-4-25">
+		<div ng-hide="mail.show_input">{{mail.company_name}}</div>
+		<input type="text" ng-model="mail.company_name" ng-show="mail.show_input">
+	</li>
+	<li class="col-4-25">
+		<div ng-hide="mail.show_input" ng-show="mail.show_input">{{mail.sender_name}}</div>
+		<input type="text" ng-model="mail.sender_name" ng-show="mail.show_input">
+	</li>
+	<li class="col-6-25">
+		<div ng-hide="mail.show_input" ng-show="mail.show_input">{{mail.sender_address}}</div>
+		<input type="text" ng-model="mail.sender_address" ng-show="mail.show_input">
+	</li>
+	<li class="col-3-25">
+		<div ng-hide="mail.show_input" ng-show="mail.show_input">{{mail.receiving_date | date: "yyyy-MM-dd"}}</div>
+		<input type="date" ng-model="mail.receiving_date" ng-show="mail.show_input">
+	</li>
+	<li class="col-3-25">
+		<div ng-hide="mail.show_input" ng-show="mail.show_input">{{mail.forwarding_date | date: "yyyy-MM-dd"}}</div>
+		<input type="date" ng-model="mail.forwarding_date" ng-show="mail.show_input">
+	</li>
+	<li class="col-4-25">
+		<div ng-hide="mail.show_input" ng-show="mail.show_input">{{mail.forwarding_method}}</div>
+		<input type="text" ng-model="mail.forwarding_method" ng-show="mail.show_input">
+	</li>
+</ul>
+<!-- mail shortlist END-->

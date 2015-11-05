@@ -1,1 +1,24 @@
-<p>form-edit</p>
+<!-- EDIT SELECTED MAILS -->
+<ul class="menu-input menu-yellow" ng-show="display.form.editMails">
+	<li class="col-6-25">
+		<button ng-click="editMailData()">
+			{{language.mailing.form.edit.editselected}}
+		</buton>
+	</li>
+	<li class="col-5-25">
+		<button ng-click="resetMailData()">
+			{{language.mailing.form.edit.cancel}}
+		</buton>
+	</li>
+	<li class="col-7-25">
+		<button ng-click="formOverWriteMails()">
+			{{language.mailing.form.edit.saveintodatabase}}
+		</buton>
+	</li>
+	<li class="col-7-25">
+		<button ng-click="formDeleteMails()">
+			{{language.mailing.form.edit.deleteselected}}
+		</buton>
+	</li>
+</ul>
+<!-- edit selected mails END -->

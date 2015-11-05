@@ -6,7 +6,9 @@ var databaseManager = angular.module('databaseManager', [
 	'ngRoute',
 	'checklist-model',
 	'companiesController',
-	'companiesFactory'
+	'companiesFactory',
+	'mailingController',
+	'mailingFactory'
 ]);
 
 /***********************************************************************************
@@ -18,7 +20,8 @@ databaseManager.config(function($routeProvider){
 		templateUrl: 'src/styling/templates/companies/companies.html',
 		controller: 'companiesCtrl'
 	}).when('/mailing', {
-		templateUrl: 'src/styling/templates/mailing/mailing.html'
+		templateUrl: 'src/styling/templates/mailing/mailing.html',
+		controller: 'mailingCtrl'
 	}).otherwise({
 		redirectTo: '/'
 	})

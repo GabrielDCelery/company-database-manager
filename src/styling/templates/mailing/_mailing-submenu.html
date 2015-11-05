@@ -1,1 +1,34 @@
-<p>submenu</p>
+<!-- MAIN MENU FEATURES -->
+<ul class="menu-features">
+	<li class="menu-red" ng-show="display.menu.searchMails">
+		<a ng-click="searchMailsButton()">
+			<img src="src/styling/images/svg-search.svg">
+			<p>{{language.mailing.submenu.search}}</p>
+		</a>
+	</li>
+	<li class="menu-purple" ng-show="display.menu.forwardMails">
+		<a ng-click="forwardMailsButton()">
+			<img src="src/styling/images/svg-forwardmail.svg">
+			<p>{{language.mailing.submenu.forwardmails}}</p>
+		</a>
+	</li>
+	<li class="menu-yellow" ng-show="display.menu.editMails">
+		<a ng-click="editMailsButton()">
+			<img src="src/styling/images/svg-editmail.svg">
+			<p>{{language.mailing.submenu.editmails}}</p>
+		</a>
+	</li>
+	<li class="menu-green" ng-show="display.menu.addNewMails">
+		<a ng-click="addNewMailsButton()">
+			<img src="src/styling/images/svg-addmail.svg">
+			<p>{{language.mailing.submenu.addnew}}</p>
+		</a>
+	</li>
+	<li class="menu-black" ng-show="display.menu.reset">
+		<a ng-click="resetDataButton()">
+			<img src="src/styling/images/svg-undo.svg">
+			<p>{{language.mailing.submenu.reset}}</p>
+		</a>
+	</li>
+</ul>
+<!-- main menu features END -->

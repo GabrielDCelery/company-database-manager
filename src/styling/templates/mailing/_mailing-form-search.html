@@ -1,1 +1,46 @@
-<p>form-search</p>
+<!-- SEARCH MAILS -->
+<ul class="menu-input menu-red" ng-show="display.form.searchMails">
+	<li class="col-4-25">
+		{{language.mailing.form.search.companyname}}
+	</li>
+	<li class="col-7-25">
+		<input type="text" ng-model="formForSearchingMailData.companyName" ng-keyup="filterListOfCompanyNamesSearch()">
+	</li>
+	<li class="col-4-25">
+		{{language.mailing.form.search.dateinterval}}
+	</li>
+	<li class="col-5-25">
+		<input type="date" ng-model="formForSearchingMailData.startingDate">
+	</li>
+	<li class="col-5-25">
+		<input type="date" ng-model="formForSearchingMailData.endingDate">
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingMailData.nonForwarded">
+		{{language.mailing.form.search.nonforwarded}}
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingMailData.forwarded">
+		{{language.mailing.form.search.forwarded}}
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingMailData.hasPostalService">
+		{{language.mailing.form.search.haspostalservice}}
+	</li>
+	<li class="col-7-25">
+		<input type="checkbox" ng-model="formForSearchingMailData.doesntHavePoastalService">
+		{{language.mailing.form.search.doesnthavepostalservice}}
+	</li>
+	<li class="col-25-25">
+		<button ng-click="formSearchMails()">LIST EMAILS</button>
+	</li>
+</ul>
+<!-- search mails END -->
+
+<!-- FILTERED COMPANIES LISTING WHILE SEARCHING-->
+<ul class="menu-listing menu-listing-red" ng-show="display.form.searchMails">
+	<li ng-repeat="companyName in filteredListOfCompanyNames" ng-click="insertCompanyNameToSearchField(companyName)">
+		{{companyName}}
+	</li>
+</ul>
+<!-- filtered companies listing while searching END -->

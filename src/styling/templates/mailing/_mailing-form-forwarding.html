@@ -1,1 +1,26 @@
-<p>form-forwarding</p>
+<!-- FORWARDING MAILS -->
+<ul class="menu-input menu-purple" ng-show="display.form.forwardMails">
+	<li class="col-4-25">
+		{{language.mailing.form.forward.forwarddate}}
+	</li>
+	<li class="col-8-25">
+		<input type="date" ng-model="formForForwardingMails.forwardingDate">
+	</li>
+	<li class="col-4-25">
+		{{language.mailing.form.forward.forwardmethod}}
+	</li>
+	<li class="col-9-25">
+		<input type="text" ng-model="formForForwardingMails.forwardingMethod">
+	</li>
+	<li class="col-12-25">
+		<button ng-click="formForwardMails()">
+			{{language.mailing.form.forward.saveintodatabase}}
+		</button>
+	</li>
+	<li class="col-13-25">
+		<button ng-click="printReceit()">
+			{{language.mailing.form.forward.printform}}
+		</button>
+	</li>
+</ul>
+<!-- forwarding mails END -->

@@ -1,1 +1,62 @@
-<p>form-addnew</p>
+<!-- ADD MAILS-->
+<ul class="menu-input menu-green" ng-show="display.form.addNewMails">
+	<li class="col-4-25">
+		{{language.mailing.form.addnew.companyname}}
+	</li>
+	<li class="col-8-25">
+		<input type="text" ng-model="formForAddingNewMails.companyName"  ng-keyup="filterListOfCompanyNamesAddNew()">
+	</li>
+	<li class="col-4-25">
+		{{language.mailing.form.addnew.date}}
+	</li>
+	<li class="col-9-25">
+		<input type="date" ng-model="formForAddingNewMails.receivingDate">
+	</li>
+</ul>
+
+<ul class="menu-input menu-green" ng-show="display.form.addNewMails" ng-repeat="newMail in formForAddingNewMails.mails">
+	<li class="col-4-25">
+		{{language.mailing.form.addnew.sendername}}
+	</li>
+	<li class="col-7-25">
+		<input type="text" ng-model="newMail.senderName" ng-keyup="filterListOfMailingAddresses(newMail)">
+	</li>
+	<li class="col-4-25">
+		{{language.mailing.form.addnew.senderaddress}}
+	</li>
+	<li class="col-8-25">
+		<input type="text" ng-model="newMail.senderAddress" ng-keyup="filterListOfMailingAddresses(newMail)">
+	</li>
+	<li class="col-1-25">
+		<a ng-click="addNewRowToAddMailForm()">
+			<img src="src/styling/images/svg-add.svg">
+		</a>
+	</li>
+	<li class="col-1-25">
+		<a ng-click="removeRowFromAddMailForm(newMail)">
+			<img src="src/styling/images/svg-remove.svg">
+		</a>
+	</li>
+</ul>
+<ul class="menu-input menu-green" ng-show="display.form.addNewMails">
+	<li class="col-25-25">
+		<button ng-click="formAddNewMails()">{{language.mailing.form.addnew.addmails}}</button>
+	</li>
+</ul>
+<!-- add mails END -->
+
+<!-- FILTERED COMPANIES LISTING WHILE ADDING NEW MAIL-->
+<ul class="menu-listing menu-listing-green" ng-show="display.form.addNewMails">
+	<li ng-repeat="companyName in filteredListOfCompanyNames" ng-click="insertCompanyNameToAddNewMailNameField(companyName)">
+		{{companyName}}
+	</li>
+</ul>
+<!-- filtered companies listing while adding new mail END -->
+
+<!-- FILTERED ADDRESS LISTING WHILE ADDING NEW MAIL-->
+<ul class="menu-listing menu-listing-green" ng-show="display.form.addNewMails">
+	<li ng-repeat="mailingAddress in filteredListOfMailingAddresses" ng-click="insertMailingAddressToAddNewMailField(mailingAddress)">
+		{{mailingAddress.sender_name}}, {{mailingAddress.sender_address}}
+	</li>
+</ul>
+<!-- filtered ADDRESS listing while adding new mail END -->
