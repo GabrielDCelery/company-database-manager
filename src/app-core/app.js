@@ -2,7 +2,12 @@
 MAIN MODULE
 ***********************************************************************************/
 
-var databaseManager = angular.module('databaseManager', ['ngRoute']);
+var databaseManager = angular.module('databaseManager', [
+	'ngRoute',
+	'checklist-model',
+	'companiesController',
+	'companiesFactory'
+]);
 
 /***********************************************************************************
 ROUTING
@@ -10,7 +15,8 @@ ROUTING
 
 databaseManager.config(function($routeProvider){
 	$routeProvider.when('/companies', {
-		templateUrl: 'src/styling/templates/companies/companies.html'
+		templateUrl: 'src/styling/templates/companies/companies.html',
+		controller: 'companiesCtrl'
 	}).when('/mailing', {
 		templateUrl: 'src/styling/templates/mailing/mailing.html'
 	}).otherwise({

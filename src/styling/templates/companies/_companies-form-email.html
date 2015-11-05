@@ -1,1 +1,18 @@
-<p>form-email</p>
+<!-- FORM/EMAIL -->
+<ul class="menu-input menu-purple" ng-show="display.form.sendEmail">
+	<li class="col-4-25">
+		{{language.companies.form.email.subject}}
+	</li>
+	<li class="col-12-25">
+		<select ng-model="subjectOfEmail.subject">
+			<option>{{language.companies.form.email.contractexpired}}</option>
+			<option>{{language.companies.form.email.lastwarning}}</option>
+		<select>
+	</li>
+	<li class="col-9-25">
+		<button ng-click="mailToSelectedCompanies()">
+			{{language.companies.form.email.sendmail}}
+		</button>
+	</li>
+</ul>
+<!-- form/email END -->

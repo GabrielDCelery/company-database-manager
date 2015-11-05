@@ -1,0 +1,261 @@
+<!-- OVERLAY/DETAILED -->
+<div class="overlay" ng-show="display.data.companiesDetailed">
+
+	<!-- OVERLAY/DETAILED/MENU -->
+	<ul class="overlay-menu">
+		<li class="menu-white" ng-show="display.menu.searchCompany">
+			<a ng-click="closeOverlay()">
+				<img src="src/styling/images/svg-redx.svg">
+			</a>
+		</li>
+	</ul>
+	<!-- overlay/detailed/menu END -->
+
+	<!-- OVERLAY/DETAILED/<FORM></FORM> -->
+	<div ng-repeat="companyDetailed in companiesDetailed | orderBy:sortShortCompanyList">
+		<ul class="data-input">
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.companyname}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.company_name}}</div>
+				<input type="text" ng-model="companyDetailed.company_name" ng-show="showForm">
+			</li>
+			<li class="col-4-25"  ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.startingdate}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.starting_date | date: "yyyy-MM-dd"}}</div>
+				<input type="date" ng-model="companyDetailed.starting_date" ng-show="showForm">
+			</li>
+			<li class="col-3-25"  ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.endingdate}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.ending_date | date: "yyyy-MM-dd"}}</div>
+				<input type="date" ng-model="companyDetailed.ending_date" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25"  ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.phonenumber}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.company_phone}}</div>
+				<input type="text" ng-model="companyDetailed.company_phone" ng-show="showForm">
+			</li>
+			<li class="col-4-25"  ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.email}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.company_email}}</div>
+				<input type="text" ng-model="companyDetailed.company_email" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25"  ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.invoicenumber}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.invoice_number}}</div>
+				<input type="text" ng-model="companyDetailed.invoice_number" ng-show="showForm">
+			</li>		
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.serviceprovider}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.service_provider}}</div>
+				<select ng-model="companyDetailed.service_provider" ng-show="showForm">
+					<option>Zeller és Zeller Kft.</option>
+					<option>World Top Sport Bt.</option>
+				</select>
+			</li>	
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.priceofservicenumber}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.price_of_serv_num}}</div>
+				<input type="text" ng-model="companyDetailed.price_of_serv_num" ng-show="showForm">
+			</li>		
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.priceofserviceletter}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.price_of_serv_let}}</div>
+				<input type="text" ng-model="companyDetailed.price_of_serv_let" ng-show="showForm">
+			</li>	
+			
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.paymentmethod}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.payment_method}}</div>
+				<select ng-model="companyDetailed.payment_method" ng-show="showForm">
+					<option>{{language.companies.data.paymentmethod.cash}}</option>
+					<option>{{language.companies.data.paymentmethod.moneytransfer}}</option>
+				</select>
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.invoicedate}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.invoice_date | date: "yyyy-MM-dd"}}</div>
+				<input type="date" ng-model="companyDetailed.invoice_date" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.transferdate}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.transfer_date | date: "yyyy-MM-dd"}}</div>
+				<input type="date" ng-model="companyDetailed.transfer_date" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.accountnumber}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.account_number}}</div>
+				<input type="text" ng-model="companyDetailed.account_number" ng-show="showForm">
+			</li>		
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.companyaddress}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.company_address}}</div>
+				<input type="text" ng-model="companyDetailed.company_address" ng-show="showForm">
+			</li>	
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.companyid}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.company_register_id}}</div>
+				<input type="text" ng-model="companyDetailed.company_register_id" ng-show="showForm">
+			</li>		
+			<li class="col-3-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.taxid}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.company_tax_id}}</div>
+				<input type="text" ng-model="companyDetailed.company_tax_id" ng-show="showForm">
+			</li>	
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.postalnumber}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.postal_number}}</div>
+				<input type="text" ng-model="companyDetailed.postal_number" ng-show="showForm">
+			</li>
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.postalservice}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.postal_service}}</div>
+				<select ng-model="companyDetailed.postal_service" ng-show="showForm">
+					<option>{{language.companies.data.postalservice.yes}}</option>
+					<option>{{language.companies.data.postalservice.no}}</option>
+				</select>
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.postalname}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.postal_name}}</div>
+				<input type="text" ng-model="companyDetailed.postal_name" ng-show="showForm">
+			</li>		
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.postaladdress}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.postal_address}}</div>
+				<input type="text" ng-model="companyDetailed.postal_address" ng-show="showForm">
+			</li>	
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.managername}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.manager_name}}</div>
+				<input type="text" ng-model="companyDetailed.manager_name" ng-show="showForm">
+			</li>	
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.managerstatus}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.manager_status}}</div>
+				<select ng-model="companyDetailed.manager_status" ng-show="showForm">
+					<option>{{language.companies.data.managerstatus.manager}}</option>
+					<option>{{language.companies.data.managerstatus.commissioned}}</option>
+				</select>
+			</li>
+			<li class="col-3-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.managerid}}
+			</li>
+			<li class="col-4-25">
+				<div ng-hide="showForm">{{companyDetailed.manager_id}}</div>
+				<input type="text" ng-model="companyDetailed.manager_id" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.managermothername}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.manager_mother_name}}</div>
+				<input type="text" ng-model="companyDetailed.manager_mother_name" ng-show="showForm">
+			</li>		
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.manageraddress}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.manager_address}}</div>
+				<input type="text" ng-model="companyDetailed.manager_address" ng-show="showForm">
+			</li>
+
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.documentholder}}
+			</li>
+			<li class="col-6-25">
+				<div ng-hide="showForm">{{companyDetailed.document_holder}}</div>
+				<input type="text" ng-model="companyDetailed.document_holder" ng-show="showForm">
+			</li>		
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				{{language.companies.form.detailed.documentholderaddress}}
+			</li>
+			<li class="col-11-25">
+				<div ng-hide="showForm">{{companyDetailed.document_holder_address}}</div>
+				<input type="text" ng-model="companyDetailed.document_holder_address" ng-show="showForm">
+			</li>
+
+			<li class="col-3-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				<button ng-click="showForm = !showForm">
+					{{language.companies.form.detailed.edit}}
+				</button>
+			</li>
+			<li class="col-6-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				<button ng-click="overwriteCompanyData(companyDetailed)">
+					{{language.companies.form.detailed.saveintodatabase}}
+				</button>
+			</li>
+			<li class="col-4-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				<button ng-click="resetCompanyDetailedForm()">
+					{{language.companies.form.detailed.cancel}}
+				</button>
+			</li>
+			<li class="col-6-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				<button ng-click="newCover(companyDetailed)">
+					{{language.companies.form.detailed.printcover}}
+				</button>
+			</li>
+			<li class="col-6-25" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[companyDetailed.css_color]">
+				<button ng-click="newContract(companyDetailed)">
+					{{language.companies.form.detailed.printcontract}}
+				</button>
+			</li>
+		</ul>
+	</div>
+	<!-- overlay/detailed/form END -->
+</div>
+<!-- overlay/detailed END -->

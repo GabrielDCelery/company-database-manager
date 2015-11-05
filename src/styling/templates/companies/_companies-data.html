@@ -1,1 +1,51 @@
-<p>data</p>
+<!-- DATA/MENU -->
+<ul class="data-menu data-blue" ng-show="display.data.companiesShortList">
+	<li class="col-1-25">
+		<input type="checkbox" ng-click="checkAll()">
+	</li>
+	<li class="col-5-25" ng-click = "sortShortCompanyList = 'company_name'">
+		{{language.companies.data.menu.companyname}}
+	</li>
+	<li class="col-6-25" ng-click = "sortShortCompanyList = 'company_email'">
+		{{language.companies.data.menu.email}}
+	</li>
+	<li class="col-4-25" ng-click = "sortShortCompanyList = 'company_phone'">
+		{{language.companies.data.menu.phonenumber}}
+	</li>
+	<li class="col-3-25" ng-click = "sortShortCompanyList = 'postal_number'">
+		{{language.companies.data.menu.postalnumber}}
+	</li>
+	<li class="col-3-25" ng-click = "sortShortCompanyList = 'starting_date'">
+		{{language.companies.data.menu.startingdate}}
+	</li>
+	<li class="col-3-25" ng-click = "sortShortCompanyList = 'ending_date'">
+		{{language.companies.data.menu.endingdate}}
+	</li>
+</ul>
+<!-- data/menu END-->
+
+<!-- DATA/SHORTLIST -->
+<ul class="data" ng-show="display.data.companiesShortList" ng-class="{green:'data-green', yellow:'data-yellow', red:'data-red'}[company.css_color]" ng-repeat="company in companiesShortList | orderBy:sortShortCompanyList">
+	<li class="col-1-25">
+		<input type="checkbox" checklist-model="selectedCompanies.id" checklist-value="company.company_id">
+	</li>
+	<li class="col-5-25">
+		{{company.company_name}}
+	</li>
+	<li class="col-6-25">
+		{{company.company_email}}
+	</li>
+	<li class="col-4-25">
+		{{company.company_phone}}
+	</li>
+	<li class="col-3-25">
+		{{company.postal_number}}
+	</li>
+	<li class="col-3-25">
+		{{company.starting_date}}
+	</li>
+	<li class="col-3-25">
+		{{company.ending_date}}
+	</li>
+</ul>
+<!-- data/shortlist END-->

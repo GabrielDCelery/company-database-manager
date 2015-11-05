@@ -1,1 +1,54 @@
-<p>form-search</p>
+<!-- FORM/SEARCH -->
+<ul class="menu-input menu-red" ng-show="display.form.searchCompany">
+	<li class="col-5-25">
+		{{language.companies.form.search.companyname}}
+	</li>
+	<li class="col-8-25">
+		<input type="text" ng-model="formForSearchingCompanyData.companyName" ng-keyup="filterListOfCompanyNames()">
+	</li>
+	<li class="col-5-25">
+		{{language.companies.form.search.managername}}
+	</li>
+	<li class="col-7-25">
+		<input type="text" ng-model="formForSearchingCompanyData.managerName" ng-keyup="filterListOfManagerNames()">
+	</li>
+	<li class="col-7-25">
+		{{language.companies.form.search.expirationdateinterval}}
+	</li>
+	<li class="col-9-25">
+		<input type="date" ng-model="formForSearchingCompanyData.startingDate">
+	</li>
+	<li class="col-9-25">
+		<input type="date" ng-model="formForSearchingCompanyData.endingDate">
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingCompanyData.validContract">
+		{{language.companies.form.search.validcontract}}
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingCompanyData.expiredContract">
+		{{language.companies.form.search.expiredcontract}}
+	</li>
+	<li class="col-6-25">
+		<input type="checkbox" ng-model="formForSearchingCompanyData.lastContractOnly">
+		{{language.companies.form.search.lastcontract}}
+	</li>
+	<li class="col-7-25">
+		<button ng-click="sendFormForSearchingCompanyData()">
+			{{language.companies.form.search.listcompanies}}
+		</button>
+	</li>
+</ul>
+<!-- form/search END -->
+
+<!-- FORM/SEARCH/FILTERCOMPANIES -->
+	<ul class="menu-listing menu-listing-red" ng-show="display.form.searchCompany">
+		<li ng-repeat="companyName in filteredListOfCompanyNames" ng-click="insertCompanyNameToInputField(companyName)">{{companyName}}</li>
+	</ul>
+<!-- form/search/filtercompanies END -->
+
+<!-- FORM/SEARCH/FILTERMANAGERS -->
+	<ul class="menu-listing menu-listing-red" ng-show="display.form.searchCompany">
+		<li ng-repeat="managerName in filteredListOfManagerNames" ng-click="insertManagerNameToInputField(managerName)">{{managerName}}</li>
+	</ul>
+<!-- form/search/filtermanagers END -->

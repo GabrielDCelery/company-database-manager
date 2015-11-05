@@ -1,1 +1,40 @@
-<p>submenu</p>
+<!-- MENU/FEATURES -->
+<ul class="menu-features">
+	<li class="menu-red" ng-show="display.menu.searchCompany">
+		<a ng-click="searchCompanyButton()">
+			<img src="src/styling/images/svg-search.svg">
+			<p>{{language.companies.submenu.search}}</p>
+		</a>
+	</li>
+	<li class="menu-purple" ng-show="display.menu.sendEmail">
+		<a ng-click="sendEmailButton()">
+			<img src="src/styling/images/svg-email.svg">
+			<p>{{language.companies.submenu.email}}</p>
+		</a>
+	</li>
+	<li class="menu-yellow" ng-show="display.menu.showDetails">
+		<a ng-click="showDetailsButton()">
+			<img src="src/styling/images/svg-detailed.svg">
+			<p>{{language.companies.submenu.details}}</p>
+		</a>
+	</li>
+	<li class="menu-cyan" ng-show="display.menu.extendContract">
+		<a ng-click="extendContractButton()">
+			<img src="src/styling/images/svg-extend.svg">
+			<p>{{language.companies.submenu.extend}}</p>
+		</a>
+	</li>
+	<li class="menu-green" ng-show="display.menu.addNewCompany">
+		<a ng-click="addNewCompanyButton()">
+			<img src="src/styling/images/svg-addcompany.svg">
+			<p>{{language.companies.submenu.addnew}}</p>
+		</a>
+	</li>
+	<li class="menu-black" ng-show="display.menu.reset">
+		<a ng-click="resetDataButton()">
+			<img src="src/styling/images/svg-undo.svg">
+			<p>{{language.companies.submenu.reset}}</p>
+		</a>
+	</li>
+</ul>
+<!-- menu/features END -->

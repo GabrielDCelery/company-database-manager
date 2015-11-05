@@ -1,1 +1,204 @@
-<p>overlay-addnew</p>
+<!-- OVERLAY/ADDNEW -->
+<div class="overlay" ng-show="display.form.addNewCompany">
+
+	<!-- OVERLAY/ADDNEW/MENU-->
+	<ul class="overlay-menu">
+		<li class="menu-white" ng-show="display.menu.searchCompany">
+			<a ng-click="closeOverlay()">
+				<img src="src/styling/images/svg-redx.svg">
+			</a>
+		</li>
+	</ul>
+	<!-- overlay/addnew/menu END -->
+
+	<!-- OVERLAY/ADDNEW/FORM -->
+	<ul class="menu-input">
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.companyname}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.company_name">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.startingdate}}
+		</li>
+		<li class="col-4-25">
+			<input type="date" ng-model="addNewCompany.starting_date">
+		</li>
+		<li class="col-3-25 menu-green">
+			{{language.companies.form.addnew.endingdate}}
+		</li>
+		<li class="col-4-25">
+			<input type="date" ng-model="addNewCompany.ending_date">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.phonenumber}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.company_phone">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.email}}
+		</li>
+		<li class="col-11-25">
+			<input type="email" ng-model="addNewCompany.company_email">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.invoicenumber}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.invoice_number">
+		</li>		
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.serviceprovider}}
+		</li>
+		<li class="col-11-25">
+			<select ng-model="addNewCompany.service_provider">
+				<option>Zeller és Zeller Kft.</option>
+				<option>World Top Sport Bt.</option>
+			</select>
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.paymentmethod}}
+		</li>
+		<li class="col-6-25">
+			<select ng-model="addNewCompany.payment_method">
+				<option>{{language.companies.data.paymentmethod.cash}}</option>
+				<option>{{language.companies.data.paymentmethod.moneytransfer}}</option>
+			</select>
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.invoicedate}}
+		</li>
+		<li class="col-11-25">
+			<input type="date" ng-model="addNewCompany.invoice_date">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.transferdate}}
+		</li>
+		<li class="col-6-25">
+			<input type="date" ng-model="addNewCompany.transfer_date">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.accountnumber}}
+		</li>
+		<li class="col-11-25">
+			<input type="text" ng-model="addNewCompany.account_number">
+		</li>
+
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.priceofservicenumber}}
+		</li>
+		<li class="col-6-25">
+			<input type="number" ng-model="addNewCompany.price_of_serv_num">
+		</li>		
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.priceofserviceletter}}
+		</li>
+		<li class="col-11-25">
+			<input type="text" ng-model="addNewCompany.price_of_serv_let">
+		</li>	
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.companyaddress}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.company_address">
+		</li>	
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.companyid}}
+		</li>
+		<li class="col-4-25">
+			<input type="text" ng-model="addNewCompany.company_register_id">
+		</li>		
+		<li class="col-3-25 menu-green">
+			{{language.companies.form.addnew.taxid}}
+		</li>
+		<li class="col-4-25">
+			<input type="text" ng-model="addNewCompany.company_tax_id">
+		</li>	
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.postalnumber}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.postal_number">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.postalservice}}
+		</li>
+		<li class="col-11-25">
+			<select ng-model="addNewCompany.postal_service">
+				<option>{{language.companies.data.postalservice.yes}}</option>
+				<option>{{language.companies.data.postalservice.no}}</option>
+			</select>
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.postalname}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.postal_name">
+		</li>		
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.postaladdress}}
+		</li>
+		<li class="col-11-25">
+			<input type="text" ng-model="addNewCompany.postal_address">
+		</li>	
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.managername}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.manager_name">
+		</li>	
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.managerstatus}}
+		</li>
+		<li class="col-4-25">
+			<select ng-model="addNewCompany.manager_status">
+				<option>{{language.companies.data.managerstatus.manager}}</option>
+				<option>{{language.companies.data.managerstatus.commissioned}}</option>
+			</select>
+		</li>
+		<li class="col-3-25 menu-green">
+			{{language.companies.form.addnew.managerid}}
+		</li>
+		<li class="col-4-25">
+			<input type="text" ng-model="addNewCompany.manager_id">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.managermothername}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.manager_mother_name">
+		</li>		
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.manageraddress}}
+		</li>
+		<li class="col-11-25">
+			<input type="text" ng-model="addNewCompany.manager_address">
+		</li>
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.documentholder}}
+		</li>
+		<li class="col-6-25">
+			<input type="text" ng-model="addNewCompany.document_holder">
+		</li>		
+		<li class="col-4-25 menu-green">
+			{{language.companies.form.addnew.documentholderaddress}}
+		</li>
+		<li class="col-11-25">
+			<input type="text" ng-model="addNewCompany.document_holder_address">
+		</li>
+		<li class="col-14-25 menu-green">
+			<button ng-click="formAddNewCompany(addNewCompany)">
+				{{language.companies.form.addnew.saveintodatabase}}
+			</button>
+		</li>
+		<li class="col-11-25 menu-green">
+			<button ng-click="newContract(addNewCompany)">
+				{{language.companies.form.addnew.printcontract}}
+			</button>
+		</li>
+	</ul>
+	<!-- overlay/addnew/form END -->
+</div>
+<!-- overlay/addnew END -->
